@@ -1,4 +1,96 @@
-body {
-  background: #eee;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: black;
+  background-color: transparent;  
 }
+
+body {
+  background-color: white;
+}
+
+#container1 {
+  width: 500px;
+  margin: 10px auto;
+}
+
+#container2 {
+  width: 500px;
+  margin: 10px auto;
+}
+
+#container3 {
+  width: 500px;
+  margin: 10px auto;
+}
+
+.title {
+  font-family: 'Times New Roman', serif;
+  font-size: 48px;
+  padding: 0.5em;
+  background-color: darkgray;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.collapse-widget {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  border: 3px solid #f8f8f8;
+}
+
+.collapse-widget .button {
+  margin-bottom: 1em;
+  padding: 0.8em 1em;
+  font: inherit;
+  letter-spacing: inherit;
+  color: white;
+  background-color: #017bff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.collapse-widget .button:hover {
+  background-color: #0069d9;  
+}
+
+.collapse-widget .collapse {
+  height: 0;
+  transition: height 250ms linear;
+  overflow: hidden;
+}
+
+.collapse-widget .content {
+  padding: 1em;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+/*
+.collapse-widget .down {
+  max-height: 200px;
+}
+
+/*
+.collapse-widget [data-animation=down] {
+  animation: collapse-animation 2s infinite normal forwards;
+}
+
+.collapse-widget [data-animation=up] {
+  animation: collapse-animation 2s infinite reverse forwards;
+}
+
+@keyframes collapse-animation {
+  0% {
+    max-height: 0;
+  }
+  
+  100% { 
+    max-height: 200px;
+  }
+}
+*/
