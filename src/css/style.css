@@ -3,6 +3,7 @@
   padding: 0;
   border: none;
   color: black;
+  font: inherit;
   background-color: transparent;  
 }
 
@@ -16,12 +17,12 @@ body {
 }
 
 #container2 {
-  width: 500px;
+  width: 350px;
   margin: 10px auto;
 }
 
 #container3 {
-  width: 500px;
+  width: 200px;
   margin: 10px auto;
 }
 
@@ -46,11 +47,10 @@ body {
 .collapse-widget .button {
   margin-bottom: 1em;
   padding: 0.8em 1em;
-  font: inherit;
+  border-radius: 5px;
   letter-spacing: inherit;
   color: white;
   background-color: #017bff;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -68,6 +68,114 @@ body {
   padding: 1em;
   border: 1px solid lightgray;
   border-radius: 5px;
+}
+
+.callback-widget {
+  position: relative;
+  padding: 0 3% 3% 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+.callback-widget * {
+  display: block;
+}
+
+.callback-widget form {
+  padding: 1em;
+  box-shadow: 4px 4px 12px 3px lightgrey;
+
+  transition-property: opacity, transform;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+
+.callback-widget .callback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.callback-widget .callback-title {
+  margin: 0.4em 0 0.7em 0;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.callback-widget .button-close {
+  padding: 0.2em;
+  border-radius: 2px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.callback-widget .button-close:hover {
+  color: blue;
+  background-color: lightgreen;
+}
+
+.callback-widget textarea {
+  box-sizing: border-box;
+  padding: 0.3em 0.5em;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+.callback-widget .button-send {
+  margin-top: 1em;
+  padding: 0.8em 0;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+.callback-widget .button-send:hover {
+  color: blue;
+  background-color: lightgreen;
+}
+
+.callback-widget .button-activate {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 2px 2px 6px 2px lightgray;
+
+  transition-property: bottom, right, width, height, opacity, transform;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+
+.callback-widget .button-activate:hover {
+  bottom: -5px;
+  right: -5px;
+  width: 60px;
+  height: 60px;
+}
+
+.callback-widget .hide {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.liker-widget {
+  padding-top: 100px;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+}
+
+.liker-widget .button-like {
+  display: block;
+  margin: 0 auto;
+  padding: 0.6em 2em;
+  border-radius: 5px;
+  color: white;
+  background-color: red;
 }
 
 /*
