@@ -8,6 +8,7 @@ export default class LikerWidget {
     return {
       widget: 'liker-widget',
       button: 'button-like',
+      heart: 'heart',
     };
   }
 
@@ -20,6 +21,24 @@ export default class LikerWidget {
     this.widget.classList.add(this.classes.widget);
     this.widget.innerHTML = this.constructor.markup;
 
+    this.button = this.widget.querySelector(`.${this.classes.button}`);
+    this.button.addEventListener('click', () => this.createHeart());
+
     this.parentEl.appendChild(this.widget);
+  }
+
+  createHeart() {
+    const heart = document.createElement('img');
+    heart.classList.add(this.classes.heart);
+    const variant = Math.trunc(Math.random() * 4) + 1;
+    heart.classList.add(`${this.classes.heart}-${variant}`);
+    heart.src = 'img/heart.png';
+    heart.width = 30;
+
+    heart.addEventListener('animationend', () => {
+      heart.remove();
+    });
+
+    this.widget.appendChild(heart);
   }
 }

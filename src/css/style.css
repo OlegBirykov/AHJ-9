@@ -160,10 +160,11 @@ body {
 
 .callback-widget .hide {
   opacity: 0;
-  transform: scale(0.5);
+  transform: scale(0);
 }
 
 .liker-widget {
+  position: relative;
   padding-top: 100px;
   font-family: 'Arial', sans-serif;
   font-size: 18px;
@@ -178,27 +179,105 @@ body {
   background-color: red;
 }
 
-/*
-.collapse-widget .down {
-  max-height: 200px;
+.liker-widget .heart {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
-/*
-.collapse-widget [data-animation=down] {
-  animation: collapse-animation 2s infinite normal forwards;
+.liker-widget .heart-1 {
+  animation-name: heart-animation-1;
 }
 
-.collapse-widget [data-animation=up] {
-  animation: collapse-animation 2s infinite reverse forwards;
+.liker-widget .heart-2 {
+  animation-name: heart-animation-2;
 }
 
-@keyframes collapse-animation {
-  0% {
-    max-height: 0;
+.liker-widget .heart-3 {
+  animation-name: heart-animation-3;
+}
+
+.liker-widget .heart-4 {
+  animation-name: heart-animation-4;
+}
+
+@keyframes heart-animation-1 {
+  25% { 
+    transform: translate(calc(-50% - 50px), -50px);
   }
   
+  50% { 
+    transform: translate(calc(-50%), -100px);
+  }
+  
+  75% { 
+    transform: translate(calc(-50% + 50px), -150px);
+  }  
+  
   100% { 
-    max-height: 200px;
+    transform: translate(calc(-50%), -200px);  
+    opacity: 0;
   }
 }
-*/
+
+@keyframes heart-animation-2 { 
+  25% { 
+    transform: translate(calc(-50%), -50px);
+  }
+  
+  50% { 
+    transform: translate(calc(-50% + 50px), -100px);
+  }
+  
+  75% { 
+    transform: translate(calc(-50% - 50px), -150px);
+  }  
+  
+  100% {
+    transform: translate(calc(-50%), -200px);    
+    opacity: 0;
+  }
+}
+
+@keyframes heart-animation-3 {
+  25% { 
+    transform: translate(calc(-50%), -50px);
+  }
+  
+  50% { 
+    transform: translate(calc(-50% - 50px), -100px);
+  }
+  
+  75% { 
+    transform: translate(calc(-50% + 50px), -150px);
+  }  
+  
+  100% {
+    transform: translate(calc(-50%), -200px);    
+    opacity: 0;
+  }
+}
+
+@keyframes heart-animation-4 {
+  25% { 
+    transform: translate(calc(-50% + 50px), -50px);
+  }
+  
+  50% { 
+    transform: translate(calc(-50%), -100px);
+  }
+  
+  75% { 
+    transform: translate(calc(-50% - 50px), -150px);
+  }  
+  
+  100% {
+    transform: translate(calc(-50%), -200px);    
+    opacity: 0;
+  }
+}
